@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Andreea's Pizza</title>
+	<link rel="stylesheet" type="text/css" href="stilizare-pizzerie.css"/>
+	<link rel="stylesheet" type="text/css" href="stilizare-meniu-pizza.css"/>
+	<script src="https://kit.fontawesome.com/c0a1db8311.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="dropdown">
+	  <button class="dropbtn">Go to</button>
+		  <div class="dropdown-content">
+		    <a href="#">Home</a>
+		    <a href="#menu">Menu</a>
+		    <a href="#about">About us</a>
+		    <a href="#galerie">Gallery</a>
+		    <a href="#contact">Contact</a>
+		    <a id = "buton-login"> Log in </a>
+		    <div id="modal2" class = "modal">
+				<div id="modal-content2">
+					<span class = "close"> &times; </span>
+					<div class="login2" id = "login-popup">
+						<p class="text-nume">First name:</p>
+						<input type="text" id="demo-l1" class="text-nume">
+						<br> <br>
+						<p class="text-nume">Last name:</p>
+						<input type="text" id="demo-l2" class="text-nume">
+						<br>
+						<button id="login"> Log in </button>
+						<p id="result"> </p>
+					</div>
+				</div>
+			</div>
+		  </div>
+	</div>
+
+
+	<header> 
+		<div id="head">
+			<h1 id="titlu"> Andreea's Pizza </h1>
+			<h3 id="subtitlu"> ~ anywhere, at your comand ~</h3>
+		</div>
+	</header>
+
+	<div id="ceas"> 
+		<p id="ora"></p>
+	</div>
+
+	<!-- Menu Container -->
+	<div class="menu" id="menu">
+	  	<div id="animatie"> <a onclick="FctReduceri()"> Sales! </a> </div>
+	    <h1 id="titlu-meniu"> MENU </h1>
+	    <div id="cutie">
+		    <div id="continut-meniu">
+		    	<div class="item">
+		      		<a href="meniu-pizza.html" target="frame1">
+		        		<div class="categorie">Pizza</div>
+		      		</a>
+		      	</div>
+		      	<div class="item">
+		      		<a href="meniu-pasta.html" target="frame1">
+		        		<div class="categorie">Pasta</div>
+		      		</a>
+		      	</div>
+		      	<div class="item">
+		      		<a href="meniu-starters.html" target="frame1">
+		        		<div class="categorie">Starter</div>
+		      		</a>
+		      	</div>
+		    </div>
+		</div>
+
+	    <div id="casuta"> 
+	    	<iframe src="meniu-pizza.html" name="frame1" width="50%" height="800"> 
+	    	</iframe>
+	    </div>
+	
+	</div>
+
+
+	<div id="about"> 
+		<h3 id="titlu-about"> ABOUT US </h3>
+		<div id="continut-about">
+			
+
+			<p class="desc"> Searching for a pizzeria in Bucharest? Tired of reading reviews about best pizzeria in Bucharest? No worries. You have landed on a right place to make an online pizza ordering. We at Andreea's Pizza are amongst the top pizza takeaways in town offering great tasting pizza at affordable prices. Order your favorite Pizza online! </p>
+
+			<p class="desc"> We are situated at 9 Stefan Dumitrescu in Bucharest and we offer deliveries to all surrounding areas in town.You might heard about Andreea's Pizza's customers positive review. We believe Our customer's reviews are the best way to show or improve our qualities. </p>
+
+			<p class="desc"> All you need to do is simply visit our online ordering webpage which is made for our valuable customer. Order your pizza menu's online. We will delivery at your doorstep's. </p>
+
+			<p class="desc"> Pizza's, side orders, dips, desserts drinks. Remember to check out our pizza special offers when you've decided to make an online ordering at Andreea's Pizza. Takeaway or delivery, we will be happy to do with you. </p>
+
+			<p class="desc"> Thank you for visiting Andreea's Pizza's webpage. We hope you enjoy our online ordering website and your pizza. Don't forget to leave your feedback in our feedback section. Call us 01905358222 for any queries related to pizza ordering. </p>
+
+			<p class="desc"> We welcome your suggestion to improve our services. </p>
+
+		</div>
+		<img src="pizzeria-interior.jpeg" alt="pizzeria"> 
+
+	</div>
+
+	<div id="galerie">
+		<h2 id="titlu-galerie"> GALLERY</h2> 
+			<div id="continut-galerie">
+				<img class="poza-pizza1" src="pizza1.jpeg" alt="pizzeria">
+				<img class="poza-pizza2" src="pizza2.jpeg" alt="pizzeria">
+				<img class="poza-pizza3" src="pizza3.jpeg" alt="pizzeria">
+				<img class="poza-pizza4" src="pizza4.jpeg" alt="pizzeria">			
+
+			</div>
+		<p class="plus"> <button id = "buton-galerie"> See more </button> </p>	
+		<div id="modal1" class = "modal">
+			<div id="modal-content">
+				<span class = "close"> &times; </span>
+				<div class="galerie-mare" id = "galerie-popup">
+					<p id="demo2">Insert your favorite color for backround, then click 'enter':</p>
+					<input type="text" id="demo">
+					<img class="poza-pizza-galerie" src="pizza1.jpeg" alt="pizzeria">
+					<img class="poza-pizza-galerie" src="pizza2.jpeg" alt="pizzeria">
+					<img class="poza-pizza-galerie" src="pizza3.jpeg" alt="pizzeria">
+					<img class="poza-pizza-galerie" src="pizza4.jpeg" alt="pizzeria">	
+				</div>
+				<button id="show-style" onclick = Show()> Show computed style </button>
+				
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="script-pizzerie.js"> </script>
+
+	<div id="divdetrecere">
+	</div>
+
+	<div id="contact">
+		<h2 id="titlu-contact"> CONTACT </h2>
+		<div class="wrraper">
+			<div class="col-flex" id="adrese">
+				<ul>
+					<li><i class="fas fa-phone"></i> Telphone: 01905358222 </li>
+					<li><i class="fas fa-envelope"></i> Email: andreeas_pizza@gmail.com </li>
+					<li><i class="fab fa-facebook"></i> Facebook: Andreea's Pizza </li>
+				</ul>
+			</div>
+
+			<div class="col-flex" id="locatie">
+				<ul>
+					<li><i class="fas fa-map-marker-alt"></i> Adress: 9 Stefan Dumitrescu </li>
+					<li> <img src="locatie.png" alt="pizzeria"> </li>
+				</ul>
+			</div> 
+
+			<div class="col-flex" id="orar">
+				<p><i class="fas fa-hourglass-half"></i> Work hours: </p>
+				<ul>
+					<li> Monday - Thursday: 9am - 10pm </li>
+					<li> Friday: 9am - 12pm </li>
+					<li> Saturday - Sunday: 10am - 3am </li>
+				</ul>
+			</div>
+
+		</div>
+
+		<p class="plus"> <a id="leave" href="pizzerie-order.html"> Leave an order </a> </p> 
+
+	</div>
+
+
+	<div class="poweredby">
+		<p id="eu"> Powered by Andreea Gherghescu </p>
+	</div>	
+	
+
+</body>
+</html>

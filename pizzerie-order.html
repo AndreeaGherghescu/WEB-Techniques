@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script type="text/javascript" src="script-pizzerie.js"> </script>
+	<link rel="stylesheet" type="text/css" href="stilizare-order-pizza.css"/>
+	<title>Leave an order</title>
+</head>
+<body>
+	<div id="box">
+		<form name="myForm" action = "/result" onsubmit="validateForm()" method = "post">
+			Name: <input type="text" name="name"><br> <br>
+			E-mail: <input type="text" name="email"><br><br>
+			Adress: <input type="text" name="adress"><br><br>
+			Phone: <input type="text" name="phone"> <br><br>
+			<p> Order: </p>
+			Margherita <input type="checkbox" id="mycheck1"><br>
+			Formaggio <input type="checkbox" id="mycheck2"><br>
+			Chicken <input type="checkbox" id="mycheck3"><br>
+			Pineapple'o'clock <input type="checkbox" id="mycheck4"><br>
+			Meat Town <input type="checkbox" id="mycheck5"><br>
+			Parma <input type="checkbox" id="mycheck6"><br>
+			Andreea's favourite <input type="checkbox" id="mycheck7"><br>
+			Today's Soup <input type="checkbox" id="mycheck8"><br>
+			Bruschetta <input type="checkbox" id="mycheck9"><br>
+			Garlic bread <input type="checkbox" id="mycheck10"><br>
+			Tomozzarella <input type="checkbox" id="mycheck11"><br>
+			Lasagna <input type="checkbox" id="mycheck12"><br>
+			Ravioli <input type="checkbox" id="mycheck13"><br>
+			Spaghetti Classica <input type="checkbox" id="mycheck14"><br>
+			Seafood pasta <input type="checkbox" id="mycheck15"><br>
+			House Specialty <input type="checkbox" id="mycheck16"><br>
+			<br>
+
+			<input type = "submit" value="Submit"> <br><br>
+		</form>
+		
+		<section id="piz">
+			<button id="btn-prise">Receive free pizza!</button>
+			<p>You received a free <span id="intrebare"> </span> <span id="pp"> </span></p>
+		</section>
+	</div>
+	<script>
+		window.onload = function () {
+
+			let xml = new XMLHttpRequest();
+		    
+		    let intrebari;
+
+			xml.open("GET", "data-pizza.json", true);
+		  	xml.send();
+			
+			xml.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+
+					intrebari = JSON.parse(xml.responseText);
+		  			afiseazaRasp (intrebari);
+		              
+		    	}
+	            
+	    	}  
+		}
+
+    	function afiseazaRasp(intrebari){
+        
+        	let b1 = document.getElementById("btn-prise");
+        	let intrebare = document.getElementById('intrebare');
+        
+        	b1.onclick = function() {
+       
+            	rnd = Math.floor(Math.random() * intrebari.test.length);
+
+            	intrebare.innerHTML = intrebari.test[rnd].pizza;	
+
+            	
+            	document.getElementById("pp").innerHTML = " pizza!"; 
+
+			}
+		}
+
+
+	</script>
+</body>
+</html>

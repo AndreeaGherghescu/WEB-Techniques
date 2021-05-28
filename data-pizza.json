@@ -1,0 +1,25 @@
+{
+	"test" : [
+		{
+			"pizza": "Margherita"
+		},
+		{ 
+			"pizza": "Formaggio" 
+		},
+		{
+			"pizza": "Chicken" 
+		},
+		{
+			"pizza": "Pineapple'o'clock" 
+		},
+		{
+			"pizza": "Meat Town" 
+		},
+		{
+			"pizza": "Parma" 
+		},
+		{
+			"pizza": "Andreea's favourite"
+		}
+	]
+}
